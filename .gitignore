@@ -1,0 +1,70 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+.vs/ServiceLauncher/v16/.suo
+.vs/ServiceLauncher/v16/Browse.VC.db
+.vs/ServiceLauncher/v16/Browse.VC.db-shm
+.vs/ServiceLauncher/v16/Browse.VC.db-wal
+.vs/ServiceLauncher/v16/Browse.VC.opendb
+.vs/ServiceLauncher/v16/ipch/AutoPCH/1b1fbfa62f2d1fc2/SERVICECONTROLLER.ipch
+.vs/ServiceLauncher/v16/ipch/AutoPCH/2f632626d000a8ac/SERVICELAUNCHER.ipch
+.vs/ServiceLauncher/v16/ipch/AutoPCH/9f40edcaeb7298fe/SERVICELAUNCHER.ipch
+.vs/ServiceLauncher/v16/ipch/AutoPCH/a5ced01dd68c7712/SERVICEDAEMON.ipch
+Debug/ServiceLauncher.exe.recipe
+Debug/ServiceLauncher.ilk
+Debug/ServiceLauncher.log
+Debug/ServiceLauncher.pdb
+Debug/ServiceLauncher.tlog/CL.command.1.tlog
+Debug/ServiceLauncher.tlog/CL.read.1.tlog
+Debug/ServiceLauncher.tlog/CL.write.1.tlog
+Debug/ServiceLauncher.tlog/link.command.1.tlog
+Debug/ServiceLauncher.tlog/link.read.1.tlog
+Debug/ServiceLauncher.tlog/link.write.1.tlog
+Debug/ServiceLauncher.tlog/ServiceLauncher.lastbuildstate
+Debug/ServiceLauncher.vcxproj.FileListAbsolute.txt
+Debug/vc142.idb
+Debug/vc142.pdb
+Release/ServiceLauncher.exe.recipe
+Release/ServiceLauncher.iobj
+Release/ServiceLauncher.ipdb
+Release/ServiceLauncher.log
+Release/ServiceLauncher.pdb
+Release/ServiceLauncher.tlog/CL.command.1.tlog
+Release/ServiceLauncher.tlog/CL.read.1.tlog
+Release/ServiceLauncher.tlog/CL.write.1.tlog
+Release/ServiceLauncher.tlog/link.command.1.tlog
+Release/ServiceLauncher.tlog/link.read.1.tlog
+Release/ServiceLauncher.tlog/link.write.1.tlog
+Release/ServiceLauncher.tlog/ServiceLauncher.lastbuildstate
+Release/ServiceLauncher.tlog/ServiceLauncher.write.1u.tlog
+Release/ServiceLauncher.vcxproj.FileListAbsolute.txt
+Release/vc142.pdb
