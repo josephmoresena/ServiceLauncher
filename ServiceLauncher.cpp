@@ -153,7 +153,7 @@ int launch_stop_service() {
 
 	if (service.GetStatus() != ServiceStatus::Stopped) {
 		local_service = &service;
-		service.Start();
+		service.Stop();
 		cout << "Service [" << service_name << "] is stopping..." << endl;
 		service.WaitForStatus(ServiceStatus::Stopped);
 	}
