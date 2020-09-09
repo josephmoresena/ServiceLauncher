@@ -30,7 +30,11 @@ ServiceController* local_service = nullptr;
 /// Executes final actions. 
 /// </summary>
 void execute_exit() {
-	cout << "The launcher waits " << secondsWaiting << " second(s)." << endl;
+	if (secondsWaiting > 0)
+	{
+		cout << "The launcher waits " << secondsWaiting << " second(s)." << endl;
+	}
+
 	if (local_service != nullptr && local_service->GetStatus() == ServiceStatus::Running) {
 		ServiceController* service = local_service;
 		local_service = nullptr;
@@ -134,6 +138,26 @@ int launch_wait_service() {
 		}
 		execute_exit();
 	}
+
+	return 0;
+}
+
+/// <summary>
+/// Executes the service stops actions.
+/// </summary>
+/// <returns>Error code.</returns>
+int launch_stop_service() {
+	auto service = ServiceController{ get_widechar_ptr(service_name) };
+
+	cout << "Service [" << service_name << "] Status: " << (int)service.GetStatus() << endl;
+
+	if (service.GetStatus() != ServiceStatus::Stopped) {
+		local_service = &service;
+		service.Start();
+		cout << "Service [" << service_name << "] is stopping..." << endl;
+	}
+
+	return 0;
 }
 
 /// <summary>
@@ -149,11 +173,16 @@ int main(int argc, char* argv[]) {
 	if (argc >= 2) {
 		if (argv[0] != "") {
 			service_name = argv[1];
-			if (argc > 2 && (!try_get_number(argv[2], &sleepSeconds) || sleepSeconds < 0)) {
+			if (argc > 2 && !try_get_number(argv[2], &sleepSeconds)) {
 				result = print_sleep_time_error();
 			}
 			else {
-				result = launch_wait_service();
+				if (sleepSeconds >= 0) {
+					result = launch_wait_service();
+				}
+				else {
+					result = launch_stop_service();
+				}
 			}
 		}
 		else {
