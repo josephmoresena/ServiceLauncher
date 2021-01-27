@@ -69,3 +69,4 @@ Release/ServiceLauncher.tlog/ServiceLauncher.write.1u.tlog
 Release/ServiceLauncher.vcxproj.FileListAbsolute.txt
 Release/vc142.pdb
 Release/ServiceLauncher.tlog/unsuccessfulbuild
+*.ipch

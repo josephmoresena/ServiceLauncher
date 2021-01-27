@@ -43,7 +43,7 @@ void execute_exit() {
 			cout << "Service [" << service_name << "] is stopping..." << endl;
 			service->WaitForStatus(ServiceStatus::Stopped);
 		}
-		free(local_service);
+		free(service);
 	}
 }
 
